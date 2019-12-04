@@ -4,6 +4,6 @@
 
 ToDo:
 - add search
-- add comparison
+- add comparison (to Luke?)
 - add sentences
 - styling
