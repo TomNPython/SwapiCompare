@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 export default function CompareLuke({ selectedChar, luke }) {
+    // convert height from string to number for comparisons
     const selectedHeight = parseInt(selectedChar.height, 10)
     return (
         <div>

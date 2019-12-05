@@ -2,6 +2,8 @@
 
 (WIP) Using react hooks, axios and the swapi API, compare any Star Wars character to Luke SKywalker on various characteristics
 
+Published at https://tomnpython.github.io/SwapiCompare/
+
 ToDo:
 - ~add search~
 - ~add comparison~

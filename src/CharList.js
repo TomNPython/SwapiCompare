@@ -25,6 +25,7 @@ export default function CharList({ chars, luke }) {
     }
 
     return (
+        //show list of all characters, not needed in final version
         <div>
             {chars.map(char => (
                 <div key={char.name}>
