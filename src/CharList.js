@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import CompareLuke from './CompareLuke'
 
-export default function CharList({ chars }) {
+export default function CharList({ chars, luke }) {
 
-    const [selectedChar, setSelectedChar] = useState([])
+    const [selectedChar, setSelectedChar] = useState([]) 
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -17,7 +18,7 @@ export default function CharList({ chars }) {
         })
     }
 
-    function showCharDetails(c) {
+    function showCharDetails(c) { // can be got rid of and put into above func? check first!
         console.log('C is ' + c)
         setSelectedChar(c)
         console.log(selectedChar)
@@ -38,6 +39,7 @@ export default function CharList({ chars }) {
             </form>           
 {selectedChar.name ? <div><p>This character's name is {selectedChar.name}.</p>
             <p>They are {selectedChar.height}cm tall.</p></div> : '' }
+            <CompareLuke selectedChar={selectedChar} luke={luke} />
         </div>
     )
 }

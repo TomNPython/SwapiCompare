@@ -9,6 +9,7 @@ import CharList from './CharList'
 export default function App() {
 
 const [chars, setChars] = useState([])
+const [luke, setLuke] = useState({})
 
 const baseUrl = 'https://swapi.co/api/people';
 
@@ -16,21 +17,25 @@ useEffect(() => {
   axios.get(baseUrl)
   .then(res => {
     setChars(res.data.results.map(char => char))
-    console.log('res results: ' + res.data.results)
-    console.log('chars: ' + chars)
+    setLuke(res.data.results[0])
+    // console.log('luke: ' + luke.name)
+    // console.log('res results: ' + res.data.results)
+    // console.log('chars: ' + chars)
   })
   .catch(err => {
-    console.error(err)
+    // console.error(err)
   })
 
 }, [baseUrl])
 
-console.log('chars2: ' + chars)
+// console.log('chars2: ' + chars)
+// console.log('luke after: ' + luke)
+// console.log('luke name: ' + luke.name)
 
   return (
     <div className="App">
-      tester names: 
-      <CharList chars={chars} />
+      <h2>Character Name:</h2>
+      <CharList chars={chars} luke={luke} />
     </div>
   );
 }
