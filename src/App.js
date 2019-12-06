@@ -10,12 +10,15 @@ export default function App() {
 
 const [chars, setChars] = useState([])
 const [luke, setLuke] = useState({})
+const [loading, setLoading] = useState(true)
 
 const baseUrl = 'https://swapi.co/api/people';
 
 useEffect(() => {
+  setLoading(true)
   axios.get(baseUrl)
   .then(res => {
+    setLoading(false)
     setChars(res.data.results.map(char => char))
     setLuke(res.data.results[0])
     // console.log('luke: ' + luke.name)
@@ -32,10 +35,12 @@ useEffect(() => {
 // console.log('luke after: ' + luke)
 // console.log('luke name: ' + luke.name)
 
+
   return (
     <div className="App">
       <h2>Character Name:</h2>
-      <CharList chars={chars} luke={luke} />
+      {loading ? 'Loading Characters...' :
+<CharList chars={chars} luke={luke} /> }
     </div>
   );
 }

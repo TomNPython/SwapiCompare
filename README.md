@@ -7,7 +7,7 @@ ToDo:
 - ~add comparison~
 - ~add sentences~
 - styling
-- add loading animation pre axios call display
+- ~add loading animation pre axios call display~
 - get list of ALL chars, not just first page
 - ~comparing luke to luke fix~
-- improve search
+- ~improve search (response to no name found)~
