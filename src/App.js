@@ -23,7 +23,7 @@ useEffect(() => {
     // console.log('chars: ' + chars)
   })
   .catch(err => {
-    // console.error(err)
+    console.log(err)
   })
 
 }, [baseUrl])

@@ -5,23 +5,22 @@ export default function CharList({ chars, luke }) {
 
     const [selectedChar, setSelectedChar] = useState([]) 
 
+    //need to change for Hooks?
     function handleSubmit(e) {
         e.preventDefault()
-        console.log('hello')
-        console.log(e.target)
-        console.log(e.target.elements[0].value)
+        // console.log(e.target.elements[0].value)
         chars.forEach(char => {
-            if (char.name == e.target.elements[0].value) {
-                console.log('match!')
+            if (char.name === e.target.elements[0].value) {
+                // console.log('match!')
                 showCharDetails(char)
             }
         })
     }
 
     function showCharDetails(c) { // can be got rid of and put into above func? check first!
-        console.log('C is ' + c)
+        // console.log('C is ' + c)
         setSelectedChar(c)
-        console.log(selectedChar)
+        // console.log(selectedChar)
     }
 
     return (
@@ -35,10 +34,10 @@ export default function CharList({ chars, luke }) {
                 </div>
             ))}
             <form onSubmit={handleSubmit}>
-                <input type='text' placeholder='name'></input>
+                <input type='text' placeholder='Name'></input>
                 <button type='submit'>Submit</button>
             </form>           
-{selectedChar.name ? <div><p>This character's name is {selectedChar.name}.</p>
+            {selectedChar.name ? <div><p>This character's name is {selectedChar.name}.</p>
             <p>They are {selectedChar.height}cm tall.</p></div> : '' }
             <CompareLuke selectedChar={selectedChar} luke={luke} />
         </div>
