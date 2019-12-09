@@ -7,7 +7,7 @@ export default function CharList({ chars, luke }) {
    // const [emptyChar, setEmptyChar]  = useState(null)
 
     //need to change for Hooks?
-    async function handleSubmit(e) {
+    function handleSubmit(e) {
                 e.preventDefault();
                 setSelectedChar({});
                 // console.log(e.target.elements[0].value)

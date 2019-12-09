@@ -12,28 +12,29 @@ const [chars, setChars] = useState([])
 const [luke, setLuke] = useState({})
 const [loading, setLoading] = useState(true)
 
-const baseUrl = 'https://swapi.co/api/people';
+let baseUrl = 'https://swapi.co/api/people';
 
 useEffect(() => {
-  setLoading(true)
   axios.get(baseUrl)
   .then(res => {
-    setLoading(false)
-    setChars(res.data.results.map(char => char))
     setLuke(res.data.results[0])
-    // console.log('luke: ' + luke.name)
-    // console.log('res results: ' + res.data.results)
-    // console.log('chars: ' + chars)
   })
-  .catch(err => {
-    console.log(err)
-  })
+  .catch(err => console.log(err))
 
-}, [baseUrl])
+  async function getData() {
+    await axios.get(baseUrl)
+    .then(res => {
+      setChars(chars => chars.concat(res.data.results.map(char => char)))
+      if (res.data.next != null) {
+        baseUrl = res.data.next
+        getData()
+      } else {
+        setLoading(false)
+      }
+    })
+  }
+getData()}, [baseUrl])
 
-// console.log('chars2: ' + chars)
-// console.log('luke after: ' + luke)
-// console.log('luke name: ' + luke.name)
 
 
   return (
