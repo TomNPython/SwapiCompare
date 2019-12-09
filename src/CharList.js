@@ -4,17 +4,14 @@ import CompareLuke from './CompareLuke'
 export default function CharList({ chars, luke }) {
 
     const [selectedChar, setSelectedChar] = useState({}) 
-   // const [emptyChar, setEmptyChar]  = useState(null)
 
     //need to change for Hooks?
     function handleSubmit(e) {
                 e.preventDefault();
                 setSelectedChar({});
-                // console.log(e.target.elements[0].value)
 
                 chars.find(char => {
                 if (char.name.toLowerCase() === e.target.elements[0].value.toLowerCase()) {
-                    // console.log('match!')
                     setSelectedChar(char)
                 }
             }

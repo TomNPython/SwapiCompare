@@ -11,3 +11,5 @@ ToDo:
 - ~get list of ALL chars, not just first page~
 - ~comparing luke to luke fix~
 - ~improve search (response to no name found)~
+- add other comparisons
+- compare two other characters
