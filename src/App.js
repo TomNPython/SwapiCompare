@@ -5,6 +5,7 @@ import React, {
 import './App.css';
 import axios from 'axios';
 import CharList from './CharList'
+import { ReactComponent as Icon } from './icons/Spin.svg';
 
 // search for 2 characters and compare them on certain characteristics
 // e.g. height, mass, birth year, number of vehicles piloted, number of films appeared in
@@ -44,7 +45,7 @@ export default function App() {
   return ( 
     <div className = "App" >
       <h2> Character Name: </h2> {
-        loading ? 'Loading Characters...' :
+        loading ? <div><Icon />Loading Characters...</div> :
           <CharList chars={chars} luke={luke} /> }
    </div>
     );
