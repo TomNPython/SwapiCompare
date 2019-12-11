@@ -1,3 +1,17 @@
+body {
+  background-image: url('./imgs/stars.jpg');
+  color: yellow;
+  text-align: center
+}
+
+.selectedChar {
+  color: orange;
+}
+
+.luke {
+  color: aqua
+}
+
 .App {
   text-align: center;
 }
