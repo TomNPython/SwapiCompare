@@ -6,10 +6,12 @@ body {
 
 .selectedChar {
   color: orange;
+  font-weight: bold;
 }
 
 .luke {
-  color: aqua
+  color: aqua;
+  font-weight: bold
 }
 
 .App {
@@ -33,4 +35,26 @@ body {
 
 .App-link {
   color: #09d3ac;
+}
+
+input, button {
+  margin: 6px;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+input {
+  background: lightblue;
+  color: grey
+}
+
+button {
+  cursor: pointer;
+  background: white;
+  color: grey
+}
+
+.loading {
+  margin: 5px;
+  padding: 10px
 }

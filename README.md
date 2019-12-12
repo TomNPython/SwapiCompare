@@ -6,12 +6,12 @@ ToDo:
 - ~add search~
 - ~add comparison~
 - ~add sentences~
-- styling
+- ~styling~
 - ~add loading animation pre axios call display~
 - ~get list of ALL chars, not just first page~
 - ~comparing luke to luke fix~
 - ~improve search (response to no name found)~
-- add other comparisons
+- ~add other comparisons~
 - compare two other characters
 - fix gh-pages route
 - dropdown select

@@ -27,14 +27,14 @@ export default function CharList({ chars, luke }) {
             <h2>Character Sheet:</h2>           
             {selectedChar.name ? <div>
                     <p>This character's name is 
-                        <span className='selectedChar'>{` ${selectedChar.name} `}</span> .</p>
+                        <span className='selectedChar'>{` ${selectedChar.name}`}</span>.</p>
                     <p>They are <span className='selectedChar'>{` ${selectedChar.height}cm `}</span> tall.</p>
-                    <p>They are <span className='selectedChar'>{` ${selectedChar.mass}kg `}</span> .</p>
+                    <p>They are <span className='selectedChar'>{` ${selectedChar.mass}kg`}</span>.</p>
                     <p>They have appeared in 
                         <span className='selectedChar'>{` ${selectedChar.films.length} `}</span>  movies.</p>
                     <p>They have piloted
                          <span className='selectedChar'>{` ${selectedChar.vehicles.length} `}</span>  vehicles.</p>
-                </div> : 'No Character Selected'}
+                </div> : 'No Known Character Selected'}
             <CompareLuke selectedChar={selectedChar} luke={luke} />
         </div>
     )

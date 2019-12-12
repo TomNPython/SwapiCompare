@@ -36,7 +36,7 @@ export default function CompareLuke({ selectedChar, luke }) {
                         </div> : 
                         <div>
                             <span className='luke'>{luke.name}</span> weighs more than 
-                            <span className='selectedChar'>{` ${selectedChar.name} `}</span>.
+                            <span className='selectedChar'>{` ${selectedChar.name}`}</span>.
                         </div> }
                 
                     </div>}
@@ -51,7 +51,7 @@ export default function CompareLuke({ selectedChar, luke }) {
                         </div> : 
                         <div>
                             <span className='luke'>{luke.name}</span> has appeared in more movies than 
-                            <span className='selectedChar'>{` ${selectedChar.name} `}</span>.
+                            <span className='selectedChar'>{` ${selectedChar.name}`}</span>.
                         </div> }
                 
                     </div>}
@@ -66,7 +66,7 @@ export default function CompareLuke({ selectedChar, luke }) {
                         </div> : 
                         <div>
                             <span className='luke'>{luke.name}</span> has piloted more vehicles than 
-                            <span className='selectedChar'>{` ${selectedChar.name} `}</span>.
+                            <span className='selectedChar'>{` ${selectedChar.name}`}</span>.
                         </div> }
                 
                     </div>}
