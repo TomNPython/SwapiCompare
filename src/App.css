@@ -58,3 +58,15 @@ button {
   margin: 5px;
   padding: 10px
 }
+
+.searched-box {
+  background: lightblue;
+  max-width: 250px;
+  color: grey;
+  margin: 20px auto;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 5px;
+  box-shadow: aqua;
+}
+

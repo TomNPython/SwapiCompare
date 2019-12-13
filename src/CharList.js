@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import CompareLuke from './CompareLuke'
 
 export default function CharList({ chars, luke }) {
 
-    const [selectedChar, setSelectedChar] = useState({}) 
+    const [selectedChar, setSelectedChar] = useState({})
+    const [searchedChars, setSearchedChars] = useState([]) 
 
     //need to change for Hooks?
     function handleSubmit(e) {
@@ -17,13 +18,40 @@ export default function CharList({ chars, luke }) {
             }
         );}
 
+    function findMatches(charToMatch, charList) {
+        return charList.filter(char => {
+            const regex = new RegExp(charToMatch, 'gi');
+            return char.name.match(regex)
+        })
+    }
+
+    function handleChange(e) {
+        console.log(e)
+        const matchArray = findMatches(e.target.value, chars)
+        setSearchedChars(matchArray.map(char => char.name))
+        console.log('SC' + searchedChars)
+        console.log('MA' + matchArray)
+    }
+
+    console.log('SCA' + searchedChars)
+
     return (
         <div>
             <p>Ready!</p>
-            <form onSubmit={handleSubmit}>
-                <input type='text' placeholder='Name'></input>
+            <form onSubmit={handleSubmit} >
+                <input onChange={handleChange} type='text' placeholder='Name'></input>
                 <button type='submit'>Submit</button>
             </form>
+            {searchedChars.length ? 
+            <div className='searched-box'>Looking for one of these? 
+                <ul>
+                    {searchedChars.map(char => 
+                    <li>
+                        {char}
+                    </li>)}
+                </ul>
+            </div>
+             : ''}
             <h2>Character Sheet:</h2>           
             {selectedChar.name ? <div>
                     <p>This character's name is 

@@ -14,4 +14,5 @@ ToDo:
 - ~add other comparisons~
 - compare two other characters
 - fix gh-pages route
-- dropdown select
+- ~dropdown select initial~
+- dropdown select improve
