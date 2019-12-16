@@ -70,3 +70,15 @@ button {
   box-shadow: aqua;
 }
 
+.searched-box ul {
+  list-style: none;
+  text-align: start;
+  font-weight: bold;
+}
+
+.searched-box ul li:hover {
+  background-color: rgb(148, 186, 199);
+  color: white;
+  cursor: pointer;
+}
+

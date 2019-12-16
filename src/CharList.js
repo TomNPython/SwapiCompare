@@ -26,14 +26,15 @@ export default function CharList({ chars, luke }) {
     }
 
     function handleChange(e) {
-        console.log(e)
         const matchArray = findMatches(e.target.value, chars)
         setSearchedChars(matchArray.map(char => char.name))
-        console.log('SC' + searchedChars)
-        console.log('MA' + matchArray)
     }
 
-    console.log('SCA' + searchedChars)
+    function handleClick(e) {
+        e.preventDefault()
+        setSelectedChar((chars.filter(char => char.name == e.currentTarget.dataset.name))[0])
+    }
+
 
     return (
         <div>
@@ -46,7 +47,7 @@ export default function CharList({ chars, luke }) {
             <div className='searched-box'>Looking for one of these? 
                 <ul>
                     {searchedChars.map(char => 
-                    <li>
+                    <li key={char} data-name={char} onClick={handleClick}>
                         {char}
                     </li>)}
                 </ul>

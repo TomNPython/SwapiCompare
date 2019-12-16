@@ -15,4 +15,4 @@ ToDo:
 - compare two other characters
 - fix gh-pages route
 - ~dropdown select initial~
-- dropdown select improve
+- ~dropdown select improve~
