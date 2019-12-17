@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/SwapiCompare/static/css/main.5abd67af.chunk.css",
+    "main.js": "/SwapiCompare/static/js/main.8cd8215b.chunk.js",
+    "main.js.map": "/SwapiCompare/static/js/main.8cd8215b.chunk.js.map",
+    "runtime-main.js": "/SwapiCompare/static/js/runtime-main.f29cdf27.js",
+    "runtime-main.js.map": "/SwapiCompare/static/js/runtime-main.f29cdf27.js.map",
+    "static/js/2.6b44af2c.chunk.js": "/SwapiCompare/static/js/2.6b44af2c.chunk.js",
+    "static/js/2.6b44af2c.chunk.js.map": "/SwapiCompare/static/js/2.6b44af2c.chunk.js.map",
+    "index.html": "/SwapiCompare/index.html",
+    "precache-manifest.29bad118dc2336c3884c304be13bdd3d.js": "/SwapiCompare/precache-manifest.29bad118dc2336c3884c304be13bdd3d.js",
+    "service-worker.js": "/SwapiCompare/service-worker.js",
+    "static/css/main.5abd67af.chunk.css.map": "/SwapiCompare/static/css/main.5abd67af.chunk.css.map",
+    "static/media/Spin.64ffe439.svg": "/SwapiCompare/static/media/Spin.64ffe439.svg",
+    "static/media/App.css": "/SwapiCompare/static/media/stars.773e9c96.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f29cdf27.js",
+    "static/js/2.6b44af2c.chunk.js",
+    "static/css/main.5abd67af.chunk.css",
+    "static/js/main.8cd8215b.chunk.js"
+  ]
+}
