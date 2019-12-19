@@ -33,6 +33,7 @@ export default function App() {
             setLoading(false)
           }
         })
+        .catch(err => console.log(err)) // check this extra catch all works ok!!
     }
     getData()
   }, [baseUrl])

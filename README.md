@@ -2,6 +2,8 @@
 
 (WIP) Using react hooks, axios and the swapi API, compare any Star Wars character to Luke Skywalker on various characteristics. Uses recursive functions to access and display paginated data from the API.
 
+View online at https://tomnpython.github.io/SwapiCompare/
+
 ToDo:
 - ~add search~
 - ~add comparison~
@@ -13,6 +15,7 @@ ToDo:
 - ~improve search (response to no name found)~
 - ~add other comparisons~
 - compare two other characters
-- fix gh-pages route
+- ~fix gh-pages route~
 - ~dropdown select initial~
 - ~dropdown select improve~
+- add scroll to onclick
