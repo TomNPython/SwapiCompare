@@ -42,6 +42,12 @@ export default function App() {
 
   return ( 
     <div>
+      <p className='intro'>Have you ever wanted to know how a certain Star Wars character measured up to 
+        Luke Skywalker?
+      </p>
+      <p className='intro'>Enter any character's name below to see their fact sheet and compare
+        it to Luke.
+      </p>
       <h2> Character Search: </h2> {
         loading ? <div><Icon /><div className='loading'>Loading Characters...</div></div> :
           <CharList chars={chars} luke={luke} /> }

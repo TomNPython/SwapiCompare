@@ -4,6 +4,12 @@ body {
   text-align: center
 }
 
+.intro {
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 10px
+}
+
 .selectedChar {
   color: orange;
   font-weight: bold;

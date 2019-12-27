@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
 import CompareLuke from './CompareLuke'
 
 export default function CharList({ chars, luke }) {
@@ -32,7 +32,7 @@ export default function CharList({ chars, luke }) {
 
     function handleClick(e) {
         e.preventDefault()
-        setSelectedChar((chars.filter(char => char.name == e.currentTarget.dataset.name))[0])
+        setSelectedChar((chars.filter(char => char.name === e.currentTarget.dataset.name))[0])
     }
 
 

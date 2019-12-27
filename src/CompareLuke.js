@@ -10,7 +10,7 @@ export default function CompareLuke({ selectedChar, luke }) {
             {selectedChar.name ? <div>
                 <p><span className='selectedChar'> {` ${selectedChar.name} `}</span> 
                  vs <span className='luke'>{luke.name}</span></p>
-                {selectedHeight == luke.height ? 
+                {selectedHeight === parseInt(luke.height, 10) ? 
                     <div>They are the same height.</div> 
                     :
                     <div> 
@@ -25,7 +25,7 @@ export default function CompareLuke({ selectedChar, luke }) {
                         </div> }
                 
                     </div>}
-                {selectedWeight == luke.mass ? 
+                {selectedWeight === parseInt(luke.mass, 10) ? 
                     <div>They are the same weight.</div> 
                     :
                     <div> 
@@ -40,7 +40,7 @@ export default function CompareLuke({ selectedChar, luke }) {
                         </div> }
                 
                     </div>}
-                {selectedChar.films.length == luke.films.length ? 
+                {selectedChar.films.length === luke.films.length ? 
                     <div>They have appeared in the same number of movies.</div> 
                     :
                     <div> 
@@ -55,7 +55,7 @@ export default function CompareLuke({ selectedChar, luke }) {
                         </div> }
                 
                     </div>}
-                {selectedChar.vehicles.length == luke.vehicles.length ? 
+                {selectedChar.vehicles.length === luke.vehicles.length ? 
                     <div>They are the same height.</div> 
                     :
                     <div> 
