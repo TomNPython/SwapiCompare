@@ -1,10 +1,13 @@
-import React, { useState} from 'react'
+import React, { useState, useRef} from 'react'
 import CompareLuke from './CompareLuke'
 
 export default function CharList({ chars, luke }) {
 
     const [selectedChar, setSelectedChar] = useState({})
     const [searchedChars, setSearchedChars] = useState([]) 
+
+    const CharListRef = useRef(null);
+
 
     //need to change for Hooks?
     function handleSubmit(e) {
@@ -26,13 +29,15 @@ export default function CharList({ chars, luke }) {
     }
 
     function handleChange(e) {
-        const matchArray = findMatches(e.target.value, chars)
+        const matchArray = findMatches(e.target.value.trim(), chars)
         setSearchedChars(matchArray.map(char => char.name))
     }
 
     function handleClick(e) {
         e.preventDefault()
+        
         setSelectedChar((chars.filter(char => char.name === e.currentTarget.dataset.name))[0])
+        CharListRef.current.scrollIntoView({block: 'start', behaviour: 'smooth'})
     }
 
 
@@ -65,11 +70,12 @@ export default function CharList({ chars, luke }) {
                          <span className='selectedChar'>{` ${selectedChar.vehicles.length} `}</span>  vehicles.</p>
                 </div> : 'No Known Character Selected'}
             <CompareLuke selectedChar={selectedChar} luke={luke} />
+            <div ref={CharListRef}></div>
         </div>
     )
 }
 
-/*
+/* 
 for mapping list of characters to page
 {chars.map(char => (
     <div key={char.name}>

@@ -74,6 +74,8 @@ button {
   border: 2px solid white;
   border-radius: 5px;
   box-shadow: aqua;
+  max-height: 200px;
+  overflow: auto
 }
 
 .searched-box ul {

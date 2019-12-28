@@ -18,4 +18,6 @@ ToDo:
 - ~fix gh-pages route~
 - ~dropdown select initial~
 - ~dropdown select improve~
-- add scroll to onclick
+- ~add scroll to onclick~
+- ~trim input of whitespace~
+- add condition for unknown height/mass

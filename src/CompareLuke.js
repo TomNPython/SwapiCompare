@@ -1,30 +1,36 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 export default function CompareLuke({ selectedChar, luke }) {
     // convert height from string to number for comparisons
     const selectedHeight = parseInt(selectedChar.height, 10)
     const selectedWeight = parseInt(selectedChar.mass, 10)
+
+    const [heightCompare, setHeightCompare] = useState()
+
+    useEffect(() => {
+        if (selectedHeight > luke.height) {
+            setHeightCompare(<div>
+                <span className='selectedChar'>{` ${selectedChar.name} `}</span> 
+                is taller than <span className='luke'>{luke.name}</span>.
+            </div>)
+        } else if (selectedHeight < luke.height) {
+            setHeightCompare(<div>
+                <span className='luke'>{luke.name}</span> is taller than 
+                <span className='selectedChar'>{` ${selectedChar.name}`}</span>.
+            </div>)
+        } else {
+            setHeightCompare('They are the same height.')
+        }
+    }, [selectedChar, luke, selectedHeight]
+    )
+    
     return (
         <div>
             <h2>Compare Luke:</h2>
             {selectedChar.name ? <div>
                 <p><span className='selectedChar'> {` ${selectedChar.name} `}</span> 
                  vs <span className='luke'>{luke.name}</span></p>
-                {selectedHeight === parseInt(luke.height, 10) ? 
-                    <div>They are the same height.</div> 
-                    :
-                    <div> 
-                    {selectedHeight > luke.height ?
-                        <div>
-                            <span className='selectedChar'>{` ${selectedChar.name} `}</span> 
-                            is taller than <span className='luke'>{luke.name}</span>.
-                        </div> : 
-                        <div>
-                            <span className='luke'>{luke.name}</span> is taller than 
-                            <span className='selectedChar'>{` ${selectedChar.name}`}</span>.
-                        </div> }
-                
-                    </div>}
+                {heightCompare}
                 {selectedWeight === parseInt(luke.mass, 10) ? 
                     <div>They are the same weight.</div> 
                     :
@@ -56,7 +62,7 @@ export default function CompareLuke({ selectedChar, luke }) {
                 
                     </div>}
                 {selectedChar.vehicles.length === luke.vehicles.length ? 
-                    <div>They are the same height.</div> 
+                    <div>They have piloted the same number of vehicles.</div> 
                     :
                     <div> 
                     {selectedChar.vehicles.length > luke.vehicles.length ?
@@ -74,3 +80,21 @@ export default function CompareLuke({ selectedChar, luke }) {
         </div>
     )
 }
+
+/* Use Effect alternate height finder/presenter
+{selectedHeight === parseInt(luke.height, 10) ? 
+                    <div>They are the same height.</div> 
+                    :
+                    <div> 
+                    {selectedHeight > luke.height ?
+                        <div>
+                            <span className='selectedChar'>{` ${selectedChar.name} `}</span> 
+                            is taller than <span className='luke'>{luke.name}</span>.
+                        </div> : 
+                        <div>
+                            <span className='luke'>{luke.name}</span> is taller than 
+                            <span className='selectedChar'>{` ${selectedChar.name}`}</span>.
+                        </div> }
+                
+                    </div>}
+*/
