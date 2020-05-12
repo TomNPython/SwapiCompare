@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/SwapiCompare/static/css/main.a91f77fe.chunk.css",
-    "main.js": "/SwapiCompare/static/js/main.931210ff.chunk.js",
-    "main.js.map": "/SwapiCompare/static/js/main.931210ff.chunk.js.map",
+    "main.js": "/SwapiCompare/static/js/main.59e1bd56.chunk.js",
+    "main.js.map": "/SwapiCompare/static/js/main.59e1bd56.chunk.js.map",
     "runtime-main.js": "/SwapiCompare/static/js/runtime-main.f29cdf27.js",
     "runtime-main.js.map": "/SwapiCompare/static/js/runtime-main.f29cdf27.js.map",
     "static/js/2.6b44af2c.chunk.js": "/SwapiCompare/static/js/2.6b44af2c.chunk.js",
     "static/js/2.6b44af2c.chunk.js.map": "/SwapiCompare/static/js/2.6b44af2c.chunk.js.map",
     "index.html": "/SwapiCompare/index.html",
-    "precache-manifest.bc0e4ea2d3f80a4f400f33687dcd1697.js": "/SwapiCompare/precache-manifest.bc0e4ea2d3f80a4f400f33687dcd1697.js",
+    "precache-manifest.efa67b78db3a99479cd66b1e99cef814.js": "/SwapiCompare/precache-manifest.efa67b78db3a99479cd66b1e99cef814.js",
     "service-worker.js": "/SwapiCompare/service-worker.js",
     "static/css/main.a91f77fe.chunk.css.map": "/SwapiCompare/static/css/main.a91f77fe.chunk.css.map",
     "static/media/Spin.88d411dd.svg": "/SwapiCompare/static/media/Spin.88d411dd.svg",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.f29cdf27.js",
     "static/js/2.6b44af2c.chunk.js",
     "static/css/main.a91f77fe.chunk.css",
-    "static/js/main.931210ff.chunk.js"
+    "static/js/main.59e1bd56.chunk.js"
   ]
 }
